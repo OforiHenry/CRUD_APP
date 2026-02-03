@@ -8,11 +8,11 @@ function CreateStudent() {
     const navigate = useNavigate();
 
      function handleSubmit(event) {
-    event.preventDefault();
-    axios.post('http://localhost:4000/create', { name, email})
-    .then(res => {
-      console.log(res);  
-      navigate('/');
+      event.preventDefault();
+     axios.post('http://localhost:4000/create', { name, email})
+     .then(res => {
+        console.log(res);  
+        navigate('/');
     }).catch(err => console.log(err));
   };
 
